@@ -2,15 +2,7 @@ var aa = [];
 var arrSymbols = [];
 var finalGrade;
 var x;
-finalGrade=parseInt( localStorage.getItem("scoreTECH"))+parseInt( localStorage.getItem("scoreIQ"))+parseInt( localStorage.getItem("scoreEN"));
-if (finalGrade<10)
-{
-     x= "...Unfortunately, You Did Not Fulfill Our Requirements, Good Luck! "
-}
-else
- { 
-     x="...Congratulation, We Will Arrange With You The Second Interview!"
-}
+
 const quizData = [
     {
         question: "Q1: What does HTML stand for?",
@@ -166,6 +158,15 @@ submitBtn.addEventListener('click', () => {
         else {
 
             localStorage.setItem("scoreTECH", scoreTECH);
+             finalGrade=parseInt( localStorage.getItem("scoreTECH"))+parseInt( localStorage.getItem("scoreIQ"))+parseInt( localStorage.getItem("scoreEN"));
+if (finalGrade<10)
+{
+     x= "...Unfortunately, You Did Not Fulfill Our Requirements, Good Luck! "
+}
+else
+ { 
+     x="...Congratulation, We Will Arrange With You The Second Interview!"
+}
             if(finalGrade>9)
            { 
                
